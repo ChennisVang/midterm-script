@@ -1,4 +1,4 @@
- #!/bin/bash
+, #!/bin/bash
  #midterm
  touch sports.txt
  clear
@@ -28,5 +28,20 @@
  udevadm info --name=/dev/sdf1
  sudo mkfs -t ext4 /dev/sdf1
  sudo mount ext4 /dev/sdf1 /home/extra
- 
+ cd /boot
+ ls -l
+ cd grub
+ less grub.cfg
+ q
+ echo $root
+ /boot/grub/grub
+ grub-install (hd1,2)/boot/grub/stage1 (hd1) (hd1,2)/boot/grub/stage2 p (hd1,2)/boot/grub/menu.co
+ mkconfig -o /boot/grub/grub.cfg
+ grub-install --boot-directory=/mnt/boot /dev/sdc
+ menuentry "Linux" {
+ insmod chain 
+ insmod ntfs
+ set root=(hd0,1)
+ chainloader +1
+ }
  
