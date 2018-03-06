@@ -1,4 +1,4 @@
-, #!/bin/bash
+ #!/bin/bash
  #midterm
  touch sports.txt
  clear
