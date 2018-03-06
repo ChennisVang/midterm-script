@@ -21,8 +21,10 @@
  grep football sports.txt>>votes2.txt
  grep soccer sports.txt>>votes3.txt
  gzip sports.txt
- gunzip sports.txt
+ gunzip sports.txt.gz
  mv sports.txt survey.txt
+ cd
+ mknod /extra/ b 8 2
  udevadm info --name=/dev/sdf1
  sudo mkfs -t ext4 /dev/sdf1
  sudo mount ext4 /dev/sdf1 /home/extra
