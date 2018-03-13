@@ -51,3 +51,4 @@
  gksu gedit 40_custom
  sudo chmod +x /etc/grub.d/40_custom
  sudo update-grub
+ #change splash screen at boot
