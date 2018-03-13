@@ -8,31 +8,40 @@
  echo -e "Thank you. Your sport has been added to the list."
  cat sports.txt
  echo "Goodbye."
- chmod 644 sports.txtmv
+ sleep 2
+ chmod 644 sports.txt
+ #changing permissions
  mkdir sports
  cp sports.txt sports
  cd sports
+ #making new directory and copy sports text file
  ls
  ln -s sports.txt survey
  pwd -LP
  echo $PATH
  file sports.txt
+ sleep 2
  grep basketball sports.txt>>votes1.txt
  grep football sports.txt>>votes2.txt
  grep soccer sports.txt>>votes3.txt
+ #sorting user responses into separate text files
  gzip sports.txt
  gunzip sports.txt.gz
+ #zip text file
  mv sports.txt survey.txt
+ #create alias 
+ sleep 2
  cd
  mknod /extra/ b 8 2
  udevadm info --name=/dev/sdf1
  sudo mkfs -t ext4 /dev/sdf1
  sudo mount ext4 /dev/sdf1 /home/extra
+ #make and mount filesystem
  cd /boot
  ls -l
+ sleep 2
  cd grub
- less grub.cfg
- q
+ less grub.cfg | head
  echo $root
  /boot/grub/grub
  grub-install (hd1,2)/boot/grub/stage1 (hd1) (hd1,2)/boot/grub/stage2 p (hd1,2)/boot/grub/menu.co
